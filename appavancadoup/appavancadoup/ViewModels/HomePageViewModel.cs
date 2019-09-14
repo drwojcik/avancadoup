@@ -1,9 +1,12 @@
-﻿using Prism.Mvvm;
+﻿using Prism.Commands;
+using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace appavancadoup.ViewModels
 {
@@ -15,9 +18,16 @@ namespace appavancadoup.ViewModels
             , IPageDialogService pageDialogService)
             : base(navigationService, pageDialogService)
         {
-           // Title = "Collect App";
+            ViewCollectionCommand = new DelegateCommand(async ()
+                => await ExecuteViewCollectionCommand(collectionName));
         }
 
+        private Task ExecuteViewCollectionCommand(string collectionName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICommand ViewCollectionCommand { get; }
         public string Title
         {
             get => title;

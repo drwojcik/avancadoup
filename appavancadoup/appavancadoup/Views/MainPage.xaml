@@ -8,10 +8,13 @@ prism:ViewModelLocator.AutowireViewModel="True"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             xmlns:views="clr-namespace:appavancadoup.Views"
              mc:Ignorable="d"
-             x:Class="appavancadoup.Views.MainPage">
+             x:Class="appavancadoup.Views.MainPage"
+      xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.ToolbarPlacement="Bottom" NavigationPage.HasNavigationBar="False">
+
     <TabbedPage.Children>
-        <views:HomePage Title="Home" IconImageSource=""/>
         <views:NewCollectionPage Title="Nova" IconImageSource=""/>
+        <views:HomePage Title="Home" IconImageSource=""/>
         <views:ProfilePage Title="Profile" IconImageSource="" />
 
     </TabbedPage.Children>
