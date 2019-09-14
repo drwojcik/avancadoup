@@ -15,7 +15,7 @@ namespace appavancadoup.ViewModels
             , IPageDialogService pageDialogService)
             : base(navigationService, pageDialogService)
         {
-            Title = "Collect App";
+           // Title = "Collect App";
         }
 
         public string Title
