@@ -10,8 +10,10 @@ namespace appavancadoup
 {
     public partial class App : PrismApplication
     {
-        //PAra poder usar componentes do xamarin forms junto e não somente o Prism
-        public App() : this(null) { }
+        public App() : this(null)
+        {
+        }
+
         public App(IPlatformInitializer platformInitializer)
             : base(platformInitializer, true)
         {
@@ -28,15 +30,17 @@ namespace appavancadoup
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
             containerRegistry.RegisterForNavigation<HomePage>();
-            containerRegistry.RegisterForNavigation<NewCollectionPage>();
             containerRegistry.RegisterForNavigation<ProfilePage>();
+            containerRegistry.RegisterForNavigation<NewCollectionPage>();
+            containerRegistry.RegisterForNavigation<CollectionPage>();
         }
 
         protected override async void OnInitialized()
         {
             InitializeComponent();
-            await NavigationService.NavigateAsync($"{nameof(NavigationPage)}/{nameof(MainPage)}?selectedTab={nameof(HomePage)}");
 
+            await NavigationService
+                .NavigateAsync($"{nameof(NavigationPage)}/{nameof(MainPage)}?selectedTab={nameof(HomePage)}");
         }
     }
 }

@@ -9,10 +9,104 @@ prism:ViewModelLocator.AutowireViewModel="True"
              mc:Ignorable="d"
              x:Class="appavancadoup.Views.ProfilePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            
+            <Grid>
+               
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="80" />
+                    
+                 
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="150" />
+                    
+               
+                    <ColumnDefinition Width="*" />
+                    
+                </Grid.ColumnDefinitions>
+               
+              
+             
+                <Label 
+                   Margin="16, 0"
+                   Text="John Doe" 
+                   TextColor="#212121" 
+                   FontAttributes="Bold" 
+                   FontSize="24"
+                    Grid.Column="0"
+
+                    Grid.Row="0"/>
+                <Button 
+                       
+                        ImageSource="https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_add_circle_outline_black_48dp.png"
+                    Margin="15"
+                
+                    Grid.Column="2"
+                    Grid.Row="0">
+                </Button>
+                <Label 
+                   Margin="16, 0"
+                   Text="144 Coleções" 
+                   TextColor="#212121" 
+                   FontAttributes="Bold" 
+                   FontSize="20"
+                    Grid.Column="1"
+
+                    Grid.Row="1"/>
+                <Label 
+                   Margin="16, 0"
+                   Text="517 Itens" 
+                   TextColor="#212121" 
+                   FontAttributes="Bold" 
+                   FontSize="20"
+                    Grid.Column="1"
+
+                    Grid.Row="2"/>
+                <Frame
+                    BackgroundColor="#BDBDBD"
+                    Margin="25"
+                    Padding="5"
+                    HeightRequest="150"
+                    Grid.Column="0"
+                    VerticalOptions="EndAndExpand"
+                    Grid.RowSpan="2"
+                    Grid.Row="1">
+                    <Image 
+                    Grid.Row="0"
+                    BackgroundColor="#C16C7A"
+                    Aspect="AspectFill"
+                    Source="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2018/08/fotos-perfil-whatsapp_23.jpg" />
+                </Frame>
+                <StackLayout
+                    Grid.Row="4"
+                    Grid.ColumnSpan="3"
+                    Margin="16"
+                    Spacing="16">
+                    <Label
+                    Margin="16, 0"
+                    Text="BLABLABLABALBALBALBABLABALBLABLABLALBLABLABLALBALBALBLBA" 
+                    TextColor="#757575"
+                    FontSize="20"/>
+                    <BoxView HeightRequest="5" Color="Accent" Opacity="0.4" />
+<Image Grid.Row="0" Aspect="AspectFill" Source="https://i.ytimg.com/vi/VfSqn5yQS1A/maxresdefault.jpg" />  
+
+                    <Label 
+                   Margin="16, 0"
+                   Text="Minhas Coleções" 
+                   TextColor="#212121" 
+                   FontAttributes="Bold" 
+                   FontSize="24"/>
+                    
+                    
+                </StackLayout>
+            </Grid>
+
+
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
